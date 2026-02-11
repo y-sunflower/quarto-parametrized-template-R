@@ -30,11 +30,3 @@ source("render.R")
 ```
 
 And that's it! You can now update `template.qmd` with your actual content, change the parameter, and so on.
-
-<br>
-
-## Automatic rendering
-
-This template also has a `.github/workflows/render.yml` script that will render all PDF (can easily be adapted to another output format such as HTML) everytime you push to the main branch and put all reports in the output branch.
-
-You can disable that by deleting the `.github` directory.
