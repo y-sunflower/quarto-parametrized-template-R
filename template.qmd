@@ -1,0 +1,24 @@
+---
+title: Quarto parametrized template for R
+format: typst
+params:
+   color: blue
+---
+
+```{=typst}
+// behavior for Typst report
+#set page(fill: `r params$color`)
+```
+
+```{=html}
+<!-- behavior for HTML report -->
+<style>
+   body {
+      background-color: `r params$color`
+   }
+</style>
+```
+
+```{r}
+print(paste0("color is: ", params$color))
+```
